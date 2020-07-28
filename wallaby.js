@@ -4,7 +4,7 @@ module.exports = function (wallaby) {
         env: {
             type: 'node',
         },
-        test: ['src/tests/**/*.test.js'],
+        tests: ['src/tests/*.test.js', 'src/tests/**/*.test.js'],
         files: ['src/**/*.js', '!**/*.test.js', '!**/.*'],
         compilers: {
             '**/*.js': wallaby.compilers.babel(),
