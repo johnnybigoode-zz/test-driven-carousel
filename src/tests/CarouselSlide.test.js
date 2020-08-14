@@ -62,6 +62,17 @@ describe('CarouselSlide', () => {
         it('renders an <img> with the given src', () => {
             expect(mounted.containsMatchingElement(<img src={imgUrl} />)).toBe(true);
         });
+
+        it('has the expected static styles', () => {
+            expect(mounted).toHaveStyleRule('width', '100%');
+            expect(mounted).toHaveStyleRule('object-fit', 'cover');
+            expect(mounted).toHaveStyleRule('height', '500');
+        });
+
+        it('uses imgHeight as the height style property', () => {
+            mounted.setProps({ imgHeight: 'calc(100vh - 100px)' });
+            expect(mounted).toHaveStyleRule('height', 'calc(100vh - 100px)');
+        });
     });
 
 });
