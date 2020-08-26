@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "lint": "npx eslint .",
+    "lint": "npx eslint . && npx prettier-eslint **/*.js",
     "lint:css": "stylelint **/*.js",
     "format": "prettier-eslint --write **/*.js",
     "build": "webpack --config webpack.config.js --display-modules ",
