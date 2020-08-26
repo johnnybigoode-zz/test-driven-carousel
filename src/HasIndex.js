@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { number } from 'prop-types';
+import PropTypes from 'prop-types';
 
 const capitalize = word => `${word[0].toUpperCase()}${word.slice(1)}`;
 
